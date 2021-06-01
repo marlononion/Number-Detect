@@ -1,0 +1,4 @@
+numpy==1.19.0
+streamlit==0.82.0
+streamlit-drawable-canvas==0.7.0
+tensorflow==2.4.1
