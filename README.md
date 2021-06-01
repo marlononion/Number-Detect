@@ -1,5 +1,5 @@
-# Number-Detect
-Detect Drawing a Number - BrainiaC©
+# Number Detect
+Draw a Number - BrainiaC©
 
 ## Install
 ```
