@@ -8,13 +8,16 @@ import streamlit as st
 from streamlit_drawable_canvas import st_canvas
 from tensorflow.keras.models import load_model
 
+st.title('Detector Númerico - BrainiaC©')
 
 dire = os.path.join(os.path.dirname(__file__), 'model')
 model = load_model('model')
 
-st.title('Detector Númerico')
+st.write("""###### Author - Marlon Sousa""")
+st.write("""###### [Blog](https://marlonsousa.medium.com)""")
+
 st.markdown('''
-Tente Digitar um Número!
+Tente Desenhar um Número!
 ''')
 
 
@@ -35,5 +38,5 @@ if canvas_result.image_data is not None:
 if st.button('Predict'):
     test_x = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     val = model.predict(test_x.reshape(1, 28, 28))
-    st.write(f'result: {np.argmax(val[0])}')
+    st.write(f"""# Resultado: {np.argmax(val[0])}""")
 
